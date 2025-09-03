@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       headers: {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
-      body: formData,
+      body: req,
     });
 
     const data = await response.json();
